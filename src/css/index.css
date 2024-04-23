@@ -1,6 +1,6 @@
 @font-face {
     font-family: fontFam;
-    src: url(/src/fonts/SF-Pro-Rounded-Light.otf);
+    src: url(./src/fonts/SF-Pro-Rounded-Light.otf);
   }
   
   div {
@@ -9,7 +9,7 @@
 
   @font-face {
     font-family: fontBold;
-    src: url(/src/fonts/SF-Pro-Rounded-Heavy.otf);
+    src: url(./src/fonts/SF-Pro-Rounded-Heavy.otf);
   }
   
   p {
