@@ -1,0 +1,177 @@
+.sub-body .desktop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+/*    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:  background-image 0.2s ease-in-out;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    background-image: url(/src/images/wallpapers/bg02.png);*/
+}
+
+.desktop .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    scale: 1.1;
+    height: inherit;
+    transition: all 1s cubic-bezier(0.16, 1, 0.29, 0.99) 0s, background 0s ease 0s;
+    width: 100%;
+    left: 0;
+    z-index: -99;
+    right: 0;
+}
+
+.desktop section {
+    width: inherit;
+}
+
+.desktop .status {
+    z-index: 999;
+    height: 4.5%;
+    position: absolute;
+    top: 0;
+    transition: all .6s ease;
+    color: #ffffffc0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+   /* background: red; */
+}
+
+.desktop .apps {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    background: plum;
+    margin-top: 2.1em;
+   /* background: black; */
+}
+
+.desktop .dock {
+    height: 10%;
+/* background: blue; */
+}
+
+button {cursor: pointer;}
+
+.desktop .workspace {
+    width: 90%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.dock {
+    display: flex;
+    justify-content: center;
+}
+
+.docks {
+    z-index: 999;
+    width: 95%;
+    height: 5.6em;
+    position: fixed;
+    bottom: 1em;
+    transition: all .55s cubic-bezier(0.16, 1, 0.29, 0.99) 0s, background 0s ease 0s;
+    box-shadow: 0 0 100px #0000003f;
+    border-radius: 1.9em;
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    background: #05050557;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.docks .dock-icons {
+    border: unset;
+    float: left;
+    background: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.219);
+    width: 4.7em;
+    height: 4.7em;
+    margin-left: 2em;
+    border-radius: 1em;
+}
+
+.docks .dock-icons img {
+    width: 4.7em;
+    height: inherit;
+}
+
+.docks .dock-icons:first-child {
+    margin-left: 0;
+}
+
+.panel {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+}
+
+.pan {
+    width: 10em;
+    height: 5px;
+    transition:  .3s ;
+    cursor: pointer;
+    background: white;
+    position: absolute;
+    bottom: 12px;
+    border-radius: 1em;
+}
+
+.pan:hover {
+    transform: translateY(-3px);
+}
+
+.pagination {
+    padding: 4px;
+    width: 5.2em;
+    position: absolute;
+    bottom: 16%;
+    border-radius: 2em;
+    display: flex;
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    align-items: center;
+    color: #ffffffc2;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.301);
+}
+
+.pagination svg {
+    transform: translateX(-2px);
+    stroke: #ffffffc2;
+    width: 1.3em;
+}
+
+.widget {
+    width: 40%;
+    margin-left: 2em;
+    transform: translateY(1em);
+    float: left;
+    border-radius: 1em;
+    background: #464646;
+    height: 10em;
+}
+
+.widget img {
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,105 @@
+@font-face {
+    font-family: fontFam;
+    src: url(/src/fonts/SF-Pro-Rounded-Light.otf);
+  }
+  
+  div {
+    font-family: fontFam;
+  }
+
+  @font-face {
+    font-family: fontBold;
+    src: url(/src/fonts/SF-Pro-Rounded-Heavy.otf);
+  }
+  
+  p {
+    font-family: fontBold;
+  }
+
+
+body {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    font-family: fontFam;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.sub-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.status .status-container {
+    width: 90%;
+}
+
+.status .status-container .status-split {
+    width: 50%;
+    float: left;
+    display: flex;
+    font-weight: 600;
+    justify-content: start;
+}
+
+.status-split .div {
+    width: 50%;
+    float: left;
+    background: red;
+}
+
+.status-split svg {
+    width: 1.5em;
+    margin-right: 7px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.status .status-container .status-split:first-child {
+    align-items: center;
+    height: 1.7em;
+}
+
+.status .status-container .status-split:last-child {
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: end;
+}
+
+/*.dynamic {
+    width: 10em;
+    height: 2.4em;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.144);
+    border-radius: 2em;
+    background: black;
+    position: fixed;
+    top: .9em;
+}*/
+
+.empt {
+    fill: #ffffff44;
+}

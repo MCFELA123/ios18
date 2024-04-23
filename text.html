@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="/src/css/apps.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+
+              
+      <div class="grid">
+        <div class="width-12/12 width-50/50@m">
+      <div class="card" id="thing">
+  
+        <img src="./src/images/app-icons/photos.webp" alt="">
+  
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+      <div class="width-12/12 width-50/50@m">
+      <div class="card" id="thing">
+       
+        <img src="./src/images/app-icons/appstor.png" alt="">
+  
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+    <div class="width-12/12 width-5/12@m">
+      <div class="card" id="thing">
+        
+          
+        <img src="./src/images/app-icons/maps.png" alt="">
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+    
+    <div class="width-12/12 width-7/12@m">
+      <div class="card" id="thing">
+       
+          
+  
+  
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+    
+    <div class="width-12/12 width-7/12@m">
+      <div class="card" id="thing">
+      
+          
+  
+  
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+    
+    <div class="width-12/12 width-5/12@m">
+      <div class="card" id="thing">
+      
+          
+  
+  
+        <button class="card__close">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="zoomer-overlay"></div>
+    </div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {});
+
+  
+  function nextTick(callback) {
+  setTimeout(callback);
+}
+
+function CardZoomer({ context, overlay }, target, options) {
+  const elements = typeof target === `string`
+    ? context.querySelectorAll(target)
+    : target;
+  
+  if (elements.length > 1) {
+    return [].slice.call(elements).map(element => new CardZoomer(
+      { context, overlay },
+      element
+    ));
+  }
+  
+  this.context = context;
+  this.element = elements[0] || elements;
+  this.overlay = overlay;
+  this.options = Object.assign({
+    transitionDuration: 500,
+  }, options);
+  
+  this.element.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if (e.target.classList.contains('card__close')) {
+      this.zoomOut();
+    } else {
+      this.zoomIn();
+    }
+  });
+  
+  this.overlay.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    this.zoomOut();
+  });
+}
+
+CardZoomer.prototype.zoomIn = function() {
+  if (this.element.classList.contains('is-zoomed')) return;
+  console.log('zoom in');
+  this.element.style.width = `${this.element.clientWidth}px`;
+  this.element.style.height = `${this.element.clientHeight}px`;
+  this.element.style.top = `${this.element.getBoundingClientRect().top}px`;
+  this.element.style.left = `${this.element.getBoundingClientRect().left}px`;
+  this.element.style.position = 'fixed';
+  this.element.style.borderRadius = '0';
+
+  document.querySelector('body').style.overflow = 'hidden';
+  this.overlay.classList.add('is-active');
+  
+  nextTick(() => {
+    this.element.classList.add('is-zoomed');
+  });
+};
+
+CardZoomer.prototype.zoomOut = function() {
+  if (!this.element.classList.contains('is-zoomed')) return;
+
+  this.element.classList.remove('is-zoomed');
+
+  document.querySelector('body').style.overflow = 'visible';
+  this.overlay.classList.remove('is-active');
+  console.log(this.overlay);
+  setTimeout(() => {
+    this.element.style.width = 'auto';
+    this.element.style.height = 'auto';
+    this.element.style.top = 'auto';
+    this.element.style.left = 'auto';
+    this.element.style.position = 'static';
+  }, this.options.transitionDuration);
+  this.element.style.borderRadius = '15px';
+};
+
+function cardZoomer(target, options) {
+  return new CardZoomer({
+    context: document,
+    overlay: document.querySelector('.zoomer-overlay'),
+  }, target, options);
+}
+
+cardZoomer('.card');
+</script>
+</html>
+
+

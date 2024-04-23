@@ -1,0 +1,96 @@
+  .card {
+    z-index: 1;
+    height: 4em !important;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.253);
+    justify-content: center;
+    border-radius: 15px;
+    transition: all .55s cubic-bezier(0.16, 1, 0.29, 0.99) 0s, background 0s ease 0s;
+    cursor: pointer;
+  }
+  
+  .card.is-zoomed {
+    background: #292929;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  
+  }
+  
+  .width-12\/12 small {
+    position: absolute;
+    font-weight: 500;
+    color: white;
+    transform: translateY(45px);
+    letter-spacing: 0px;
+    margin-top: 2em;
+  }
+  
+  
+  
+  .card__close {
+    width: 10em;
+    height: 5px;
+    transition:  .3s ;
+    display: none;
+    cursor: pointer;
+    background: white;
+    position: absolute;
+    bottom: 12px;
+    border-radius: 1em;
+  }
+
+  .card__close:hover {
+    transform: translateY(-3px);
+  }
+
+  .is-zoomed .card__close {
+    display: block;
+  }
+
+  .zoomer-overlay.is-active {
+    opacity: 0.9;
+    pointer-events: auto;
+  }
+  
+
+  
+  .width-12\/12 {
+    float: left;
+    width: 4em !important;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin-top: 2em;
+    margin-left: 2.33em;
+  }
+  
+.card img {
+    width: 100%;
+    height: 100%;
+} 
+
+.swiper {
+    width: 100%;
+    height: 77%;
+    transition: all .6s cubic-bezier(0.16, 1, 0.29, 0.99) 0s, background 0s ease 0s;
+
+    margin-top: 2em;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

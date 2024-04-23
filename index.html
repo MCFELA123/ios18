@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/src/css/index.css">
+    <link rel="stylesheet" href="/src/css/battery.css">
+    <link rel="stylesheet" href="/src/css/apps.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/desktop.css">
+    <link rel="manifest" href="/src/manifest/manifest.json">
+    <script src="/src/script/javascript/apps.js"></script>
+    <script src="/src/script/javascript/index.js"></script>
+    <meta name="theme-color" content="#00000000"/>
+    <link rel="shortcut icon" href="/src/icons/favicon.png" type="image/x-icon">
+    <meta name="description" content="Try IOS 18">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOS 18 - Tryit</title>
+</head>
+<body id="body">
+     <div class="sub-body">
+        <div class="desktop">
+            <section class="status" id="status">
+                <div class="status-container">
+                     <div class="status-split">
+                        <div id="txt"></div>
+                     </div>
+                     <div class="status-split">
+                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="cellular"><path class="empt" d="M472,432H424a24,24,0,0,1-24-24V104a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,472,432Z"></path><path class="empt" d="M344,432H296a24,24,0,0,1-24-24V184a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,344,432Z"></path><path d="M216,432H168a24,24,0,0,1-24-24V248a24,24,0,0,1,24-24h48a24,24,0,0,1,24,24V408A24,24,0,0,1,216,432Z"></path><path d="M88,432H40a24,24,0,0,1-24-24V312a24,24,0,0,1,24-24H88a24,24,0,0,1,24,24v96A24,24,0,0,1,88,432Z"></path></g></svg>
+                            <svg class="svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path class="empt" d="M512 192c-163 0-326 67.2-443 176.6-6.6 6-6.8 16.2-0.6 22.8l53.4 55.8c6.2 6.6 16.6 6.8 23.2 0.6 46.6-43.2 99.8-77.6 158.6-102 66-27.6 136.2-41.4 208.6-41.4s142.6 14 208.6 41.4c58.8 24.6 112 58.8 158.6 102 6.6 6.2 17 6 23.2-0.6l53.4-55.8c6.2-6.4 6-16.6-0.6-22.8C838 259.2 675 192 512 192z"  /><path d="M226.4 555l57.2 56.6c6.2 6 16 6.4 22.4 0.6 56.6-50.2 129.2-77.8 205.8-77.8s149.2 27.4 205.8 77.8c6.4 5.8 16.2 5.4 22.4-0.6l57.2-56.6c6.6-6.6 6.4-17.2-0.6-23.4-75-67.8-175.2-109.2-285-109.2s-210 41.4-285 109.2c-6.6 6.2-6.8 16.8-0.2 23.4zM512 648.4c-46.8 0-89.2 19.6-118.8 51-6 6.4-5.8 16.2 0.4 22.4l106.8 105.4c6.4 6.4 16.8 6.4 23.2 0l106.8-105.4c6.2-6.2 6.4-16 0.4-22.4-29.6-31.2-72-51-118.8-51z"  /></svg>
+                        <div class="container">
+                            <div class="before"></div>
+                            <div id="battery">
+                              <div id="charge"></div>
+                             <b id="charge-level"></b>
+                            </div>
+                            <div hidden id="charging-time"></div>
+                          </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+          
+             
+                    <div class="swiper mySwiper" id="swiper">
+                       <div class="swiper-wrapper">
+                        <div class="swiper-slide">                               
+                            <div class="widget"></div>
+                            <div class="widget"></div>
+                              <div class="width-12/12 width-50/50@m">
+                            <div class="card" id="thing">
+                        
+                              <img src="./src/images/app-icons/photos.webp" alt="">
+                        
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Photos</small>
+                          </div>
+
+                            <div class="width-12/12 width-50/50@m">
+                            <div class="card" id="thing">
+                             
+                              <img src="./src/images/app-icons/camera.png" alt="">
+                        
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Camera</small>
+                          </div>
+
+                          <div class="width-12/12 width-5/12@m">
+                            <div class="card" id="thing">
+                              
+                                
+                              <img src="./src/images/app-icons/maps.png" alt="">
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Maps</small>
+                          </div>
+                          
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                 
+                                <img src="./src/images/app-icons/settings.webp" alt="">
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>settings</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                <img src="./src/images/app-icons/clcok.png" alt="">
+                        
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Clock</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                <img src="./src/images/app-icons/shortcuts.webp" alt="">
+                        
+                        
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Shortcuts</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                
+                                <img src="./src/images/app-icons/facetime.png" alt="">
+
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Facetime</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                
+                                <img src="./src/images/app-icons/Watchapple.webp" alt="">
+
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Watch</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                <img src="./src/images/app-icons/files.png" alt="">
+
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Files</small>
+                          </div>
+
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                             
+                                
+                                <img src="./src/images/app-icons/yv.webp" alt="">
+                        
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Apple TV</small>
+                          </div>
+                          
+                          <div class="width-12/12 width-7/12@m">
+                            <div class="card" id="thing">
+                            
+                                
+                                <img src="./src/images/app-icons/notes.png" alt="">
+                              <div class="card__close" id="pan" onclick="panate()"></div>
+                            </div>
+                            <small>Notes</small>
+                          </div>
+                          
+                          <div class="width-12/12 width-5/12@m">
+                            <div class="card" id="thing">
+                            
+                                <img src="./src/images/app-icons/itune.png" alt="">
+                        
+                        
+                                <div class="panel">
+                                    <div class="card__close" id="pan" onclick="panate()"></div>                                </div>
+                            </div>
+                            <small>Itunes</small>
+                          </div>
+                        
+                       
+                        
+                        <div class="zoomer-overlay"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="width-12/12 width-5/12@m">
+                                <div class="card" id="thing">
+                                
+                                    <img src="./src/images/app-icons/health.webp" alt="">
+                            <div class="panel">
+                                        <div class="card__close" id="pan" onclick="panate()"></div>                                </div>
+                                </div>
+                                <small>Health</small>
+                              </div>
+    
+                              <div class="width-12/12 width-5/12@m">
+                                <div class="card" id="thing">
+                                
+                                    <img src="./src/images/app-icons/calendar.webp" alt="">
+                            
+                            
+                                    <div class="panel">
+                                        <div class="card__close" id="pan" onclick="panate()"></div>                                </div>
+                                </div>
+                                <small>Calendar</small>
+                              </div>
+    
+                              <div class="width-12/12 width-5/12@m">
+                                <div class="card" id="thing">
+                                
+                                    <img src="./src/images/app-icons/calculator.png" alt="">
+                            
+                            
+                                    <div class="panel">
+                                        <div class="card__close" id="pan" onclick="panate()"></div>                                </div>
+                                </div>
+                                <small>Calculator</small>
+                              </div>
+    
+                              <div class="width-12/12 width-5/12@m">
+                                <div class="card" id="thing">
+                                
+                                    <img src="./src/images/app-icons/appstor.png" alt="">
+                            
+                            
+                                    <div class="panel">
+                                        <div class="card__close" id="pan" onclick="panate()"></div>                                </div>
+                                </div>
+                                <small>App Store</small>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">Slide 3</div>
+                        </div>
+                      </div>
+                      
+                      <!-- Swiper JS -->
+                      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                      
+         
+            <section class="dock">
+                <div class="docks" id="docks">
+                    <button class="dock-icons"><img src="/src/images/app-icons/safari.png" alt=""></button>
+                    <button class="dock-icons"><img src="/src/images/app-icons/Phone_iOS.png" alt=""></button>
+                    <button class="dock-icons"><img src="/src/images/app-icons/appstor.png" alt=""></button>
+                    <button class="dock-icons"><img src="./src/images/app-icons/music.png" alt=""></button>
+                    <button class="dock-icons"><img src="./src/images/app-icons/iMessage.png" alt=""></button>
+                   <!--<button onclick="ee()" id="we">click</button>-->
+                </div>
+            </section>
+<div class="panel">
+    <div class="pan card__close" id="pan" onclick="panate()"></div>
+</div>
+<script>
+    function panate() {
+        
+  document.getElementById("swiper").style.width = '100%';
+  document.getElementById("swiper").style.height = '77%';
+  document.getElementById("docks").style.bottom = '2em';
+  document.getElementById("swiper").style.marginTop = '2em';
+  document.getElementById("bg").style.scale = '1.1';
+    }
+</script>
+
+            
+
+            <img src="./src/images/wallpapers/bg02.png" class="bg" alt="bg" id="bg">
+        </div>
+     </div>
+
+     <div class="dynamic"></div>
+     <div class="pagination">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-112.33 -112.33 713.06 713.06" xml:space="preserve" stroke="white" stroke-width="42.49079999999999"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"></path> </g> </g> </g></svg>    
+    Search
+    </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+
+    <script id="weak">
+
+    var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            hide: true,
+          },
+        });
+
+
+    function nextTick(callback) {
+  setTimeout(callback);
+}
+
+function CardZoomer({ context, overlay }, target, options) {
+  const elements = typeof target === `string`
+    ? context.querySelectorAll(target)
+    : target;
+  
+  if (elements.length > 1) {
+    return [].slice.call(elements).map(element => new CardZoomer(
+      { context, overlay },
+      element
+    ));
+  }
+  
+  this.context = context;
+  this.element = elements[0] || elements;
+  this.overlay = overlay;
+  this.options = Object.assign({
+    transitionDuration: 500,
+  }, options);
+  
+  this.element.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if (e.target.classList.contains('card__close')) {
+      this.zoomOut();
+    } else {
+      this.zoomIn();
+    }
+  });
+  
+  this.overlay.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    this.zoomOut();
+  });
+}
+
+CardZoomer.prototype.zoomIn = function() {
+  if (this.element.classList.contains('is-zoomed')) return;
+  console.log('zoom in');
+  this.element.style.width = `${this.element.clientWidth}px`;
+  this.element.style.height = `${this.element.clientHeight}px`;
+  this.element.style.top = `${this.element.getBoundingClientRect().top}px`;
+  this.element.style.left = `${this.element.getBoundingClientRect().left}px`;
+  this.element.style.position = 'fixed';
+  this.element.style.borderRadius = '0';
+  this.element.style.zIndex = '999';
+
+  document.getElementById("swiper").style.width = '100%';
+  document.getElementById("swiper").style.height = '100%';
+  document.getElementById("swiper").style.marginTop = '0';
+  document.getElementById("docks").style.bottom = '-7em';
+  document.getElementById("bg").style.scale = '1';
+  document.querySelector('body').style.overflow = 'hidden';
+  this.overlay.classList.add('is-active');
+  
+  nextTick(() => {
+    this.element.classList.add('is-zoomed');
+  });
+};
+
+CardZoomer.prototype.zoomOut = function() {
+  if (!this.element.classList.contains('is-zoomed')) return;
+
+  this.element.classList.remove('is-zoomed');
+
+  document.querySelector('body').style.overflow = 'visible';
+  this.overlay.classList.remove('is-active');
+  console.log(this.overlay);
+  setTimeout(() => {
+    this.element.style.width = 'auto';
+    this.element.style.height = 'auto';
+    this.element.style.top = 'auto';
+    this.element.style.left = 'auto';
+    this.element.style.position = 'static';
+    this.element.style.zIndex = 'unset';
+  }, this.options.transitionDuration);
+
+  document.getElementById("swiper").style.width = '100%';
+  document.getElementById("swiper").style.height = '77%';
+  document.getElementById("docks").style.bottom = '2em';
+  document.getElementById("swiper").style.marginTop = '2em';
+  document.getElementById("bg").style.scale = '1.1';
+  this.element.style.borderRadius = '15px';
+};
+
+function cardZoomer(target, options) {
+  return new CardZoomer({
+    context: document,
+    overlay: document.querySelector('.zoomer-overlay'),
+  }, target, options);
+}
+
+cardZoomer('.card');
+    const chargeLevel = document.getElementById("charge-level");
+const charge = document.getElementById("charge");
+const chargingTimeRef = document.getElementById("charging-time");
+
+window.onload = () => {
+  //For browsers that don't support the battery status API
+  if (!navigator.getBattery) {
+    alert("Please update your device for better performance");
+    return false;
+  }
+
+};
+/*
+
+window.onload = function() {ariaChat()};
+
+function ariaChat() {
+  if(document.getElementById("mode").innerHTML = 'light') {
+    document.getElementById("charge").style.background = 'red';
+  }
+
+  else {
+    document.getElementById("charge").style.background = 'white';
+  }
+}
+*/
+navigator.getBattery().then((battery) => {
+  function updateAllBatteryInfo() {
+    updateChargingInfo();
+    updateLevelInfo();
+  }
+  updateAllBatteryInfo();
+
+  //When the charging status changes
+  battery.addEventListener("chargingchange", () => {
+    updateAllBatteryInfo();
+  });
+
+  //When the Battery Levvel Changes
+  battery.addEventListener("levelchange", () => {
+    updateAllBatteryInfo();
+  });
+
+  function updateChargingInfo() {
+    if (battery.charging) {
+      charge.classList.add("active");
+      charge.style.background = 'rgb(0, 255, 145)';
+      document.getElementById("battery").style.color = '#471d1dbb';
+      chargingTimeRef.innerText = "";
+    } else {
+      charge.classList.remove("active");
+      charge.style.background = '#ffffffc2';
+      document.getElementById("battery").style.color = '#471d1da9';
+      //Display time left to discharge only when it is a integer value i.e not infinity
+      if (parseInt(battery.dischargingTime)) {
+        let hr = parseInt(battery.dischargingTime / 3600);
+        let min = parseInt(battery.dischargingTime / 60 - hr * 60);
+        chargingTimeRef.innerText = `${hr}hr ${min}mins remaining`;
+      }
+    }
+  }
+
+  //Updating battery level
+  function updateLevelInfo() {
+    let batteryLevel = `${parseInt(battery.level * 100)}%`;
+    charge.style.width = batteryLevel;
+    chargeLevel.textContent = batteryLevel;
+  }
+});
+
+window.onload = startTime;
+function startTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m;
+    document.getElementById("txt").innerText = time;
+    document.getElementById("txt").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+
+
+</script>
+</html>
